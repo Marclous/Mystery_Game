@@ -53,15 +53,20 @@ if keyboard_check_pressed(ord("E")) {
                found = true;
                break;
             }
-			if (place_meeting(x + dx, y + dy, obj_door)) && has_key {
+			if (place_meeting(x + dx, y + dy, obj_door)) && has_key && room == rm_bedroom {
                show_debug_message("opendoor")
 			   startDialogue("OpenDoor")
 			   room_goto(rm_kitchen)
                found = true;
                break;
-            }else if (place_meeting(x + dx, y + dy, obj_door)) {
+            }else if (place_meeting(x + dx, y + dy, obj_door)) && room == rm_bedroom {
 				show_debug_message("door")
 				startDialogue("Door")
+				found = true
+				break
+			}else if (place_meeting(x + dx, y + dy, obj_door)) && room == rm_kitchen && met_voice == false {
+				show_debug_message("kitchendoor")
+				startDialogue("KitchenDoor")
 				found = true
 				break
 			}

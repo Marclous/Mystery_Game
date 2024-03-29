@@ -37,3 +37,15 @@ global.topics[$ "Door"] = [
 global.topics[$ "OpenDoor"] = [
 	TEXT(global.gameinfo.rm_bedroom.interactables.obj_door.lines[0].lines[0].text)
 	]
+	
+global.topics[$ "Kitchen"] = [
+	TEXT(global.gameinfo.rm_kitchen.lines[0].text)
+	]
+
+global.topics[$ "KitchenDoor"] = [
+	TEXT(global.gameinfo.rm_kitchen.interactables.obj_door.lines[1].text)
+	]
+
+global.topics[$ "VoiceDoor"] = [
+	TEXT(global.gameinfo.rm_kitchen.interactables.obj_door.lines[0].lines[0].text)
+	]

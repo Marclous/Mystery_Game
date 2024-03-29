@@ -53,6 +53,7 @@
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oSolidWall","path":"objects/oSolidWall/oSolidWall.yy",},},
     {"id":{"name":"rm_bedroom","path":"rooms/rm_bedroom/rm_bedroom.yy",},},
+    {"id":{"name":"rm_kitchen","path":"rooms/rm_kitchen/rm_kitchen.yy",},},
     {"id":{"name":"rm_voice_angry","path":"rooms/rm_voice_angry/rm_voice_angry.yy",},},
     {"id":{"name":"rm_voice_happy","path":"rooms/rm_voice_happy/rm_voice_happy.yy",},},
     {"id":{"name":"loadjson","path":"scripts/loadjson/loadjson.yy",},},
@@ -88,6 +89,7 @@
     {"roomId":{"name":"rm_bedroom","path":"rooms/rm_bedroom/rm_bedroom.yy",},},
     {"roomId":{"name":"rm_voice_happy","path":"rooms/rm_voice_happy/rm_voice_happy.yy",},},
     {"roomId":{"name":"rm_voice_angry","path":"rooms/rm_voice_angry/rm_voice_angry.yy",},},
+    {"roomId":{"name":"rm_kitchen","path":"rooms/rm_kitchen/rm_kitchen.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

@@ -12,5 +12,6 @@ localframe = 0
 
 has_apple = false
 has_key = false
+met_voice = false
 
 global.free_move = true

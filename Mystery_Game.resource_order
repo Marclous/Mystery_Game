@@ -32,6 +32,7 @@
     {"name":"oCamera","order":13,"path":"objects/oCamera/oCamera.yy",},
     {"name":"oSolidWall","order":16,"path":"objects/oSolidWall/oSolidWall.yy",},
     {"name":"rm_bedroom","order":4,"path":"rooms/rm_bedroom/rm_bedroom.yy",},
+    {"name":"rm_kitchen","order":5,"path":"rooms/rm_kitchen/rm_kitchen.yy",},
     {"name":"rm_voice_angry","order":3,"path":"rooms/rm_voice_angry/rm_voice_angry.yy",},
     {"name":"rm_voice_happy","order":2,"path":"rooms/rm_voice_happy/rm_voice_happy.yy",},
     {"name":"playeranimationsprite","order":5,"path":"scripts/playeranimationsprite/playeranimationsprite.yy",},
