@@ -10,8 +10,10 @@ spriteWalk = sPlayerWalk
 spriteIdle = sPlayer	
 localframe = 0
 
-has_apple = false
+
 has_key = false
+has_fish = false
 met_voice = false
 
 global.free_move = true
+

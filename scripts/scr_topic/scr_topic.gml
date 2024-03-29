@@ -49,3 +49,82 @@ global.topics[$ "KitchenDoor"] = [
 global.topics[$ "VoiceDoor"] = [
 	TEXT(global.gameinfo.rm_kitchen.interactables.obj_door.lines[0].lines[0].text)
 	]
+
+global.topics[$ "Fish"] = [
+	TEXT(global.gameinfo.rm_kitchen.interactables.obj_fish.lines[0].text)
+	]
+	
+global.topics[$ "VoiceFish"] = [
+	TEXT(global.gameinfo.rm_kitchen.interactables.obj_fish.lines[1].lines[0].text)
+	]
+
+global.topics[$ "WoodenFish"] = [
+	TEXT(global.gameinfo.rm_kitchen.interactables.obj_wooden_fish.lines[0].text)
+	]
+
+global.topics[$ "PlasticFish"] = [
+	TEXT(global.gameinfo.rm_kitchen.interactables.obj_plastic_fish.lines[0].text)
+	]
+	
+global.topics[$ "VoicePlasticFish"] = [
+	TEXT(global.gameinfo.rm_kitchen.interactables.obj_plastic_fish.lines[1].lines[0].text)
+	]
+
+global.topics[$ "SingingFish"] = [
+	TEXT(global.gameinfo.rm_kitchen.interactables.obj_singing_fish.lines[0].speaker),
+	TEXT(global.gameinfo.rm_kitchen.interactables.obj_singing_fish.lines[0].text),
+	TEXT(global.gameinfo.rm_kitchen.interactables.obj_singing_fish.lines[1].text)
+	]
+	
+global.topics[$ "Fridge"] = [
+	TEXT(global.gameinfo.rm_kitchen.interactables.obj_fridge.lines[0].lines[0].text),
+	TEXT(global.gameinfo.rm_kitchen.interactables.obj_fridge.lines[0].lines[1].text),
+	TEXT(global.gameinfo.rm_kitchen.interactables.obj_fridge.lines[0].lines[2].speaker),
+	CHOICE(global.gameinfo.rm_kitchen.interactables.obj_fridge.lines[0].lines[2].text,
+		OPTION(global.gameinfo.rm_kitchen.interactables.obj_fridge.lines[0].lines[3].choices[0].text, "FridgeResponse"),
+		OPTION(global.gameinfo.rm_kitchen.interactables.obj_fridge.lines[0].lines[3].choices[1].text, "FridgeResponse")
+		),
+	]
+
+global.topics[$ "FridgeResponse"] = [
+	TEXT(global.gameinfo.rm_kitchen.interactables.obj_fridge.lines[0].lines[4].speaker),
+	TEXT(global.gameinfo.rm_kitchen.interactables.obj_fridge.lines[0].lines[4].text)
+	]
+
+global.topics[$ "VoiceFridge"] = [
+	TEXT(global.gameinfo.rm_kitchen.interactables.obj_fridge.lines[1].lines[0].speaker),
+	TEXT(global.gameinfo.rm_kitchen.interactables.obj_fridge.lines[1].lines[0].text),
+	
+	]
+global.topics[$ "VoiceFridgeFish"] = [
+	CHOICE(global.gameinfo.rm_kitchen.interactables.obj_fridge.lines[1].lines[0].text,
+		OPTION(global.gameinfo.rm_kitchen.interactables.obj_fridge.lines[1].lines[1].choices[0].text,noone,1)
+		
+		)
+	]
+	
+global.topics[$ "VoiceFridgeApple"] = [
+	CHOICE(global.gameinfo.rm_kitchen.interactables.obj_fridge.lines[1].lines[0].text,
+		OPTION(global.gameinfo.rm_kitchen.interactables.obj_fridge.lines[1].lines[1].choices[1].text,noone,2)
+		
+		)
+	]
+
+global.topics[$ "VoiceFridgeFishApple"] = [
+	CHOICE(global.gameinfo.rm_kitchen.interactables.obj_fridge.lines[1].lines[0].text,
+		OPTION(global.gameinfo.rm_kitchen.interactables.obj_fridge.lines[1].lines[1].choices[0].text,noone,1),
+		OPTION(global.gameinfo.rm_kitchen.interactables.obj_fridge.lines[1].lines[1].choices[1].text,noone,2),
+		)
+	]
+
+global.topics[$ "Happy"] = [
+	TEXT(global.gameinfo.rm_voice_happy.lines[0].text),
+	TEXT(global.gameinfo.rm_voice_happy.lines[1].text)
+	]
+	
+global.topics[$ "Angry"] = [
+	TEXT(global.gameinfo.rm_voice_angry.lines[0].speaker),
+	TEXT(global.gameinfo.rm_voice_angry.lines[0].text),
+	TEXT(global.gameinfo.rm_voice_angry.lines[1].text),
+	TEXT(global.gameinfo.rm_voice_angry.lines[2].text)
+	]

@@ -14,3 +14,4 @@ function import_json(_file_name, _func) {
 }
 
 global.gameinfo = import_json("mystery.json", json_parse)
+global.has_apple = false

@@ -3,6 +3,7 @@ function startDialogue(topic) {
 	
 	var inst =	instance_create_depth(x,y, -999, obj_textbox)
 	inst.setTopic(topic)
+	
 }
 
 

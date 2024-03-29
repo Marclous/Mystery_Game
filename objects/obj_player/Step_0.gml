@@ -35,7 +35,7 @@ if keyboard_check_pressed(ord("E")) {
 			   startDialogue("Apple")
 			   var key = instance_create_depth(obj_apple.x-5,obj_apple.y-10, -999,obj_key)
 			   instance_destroy(obj_apple)
-			   has_apple = true
+			   global.has_apple = true
                found = true;
                break;
             }
@@ -45,7 +45,7 @@ if keyboard_check_pressed(ord("E")) {
                found = true;
                break;
             }
-			if (place_meeting(x + dx, y + dy, obj_key)) && has_apple {
+			if (place_meeting(x + dx, y + dy, obj_key)) && global.has_apple {
                show_debug_message("key")
 			   startDialogue("Key")
 			   instance_destroy(obj_key)
@@ -70,10 +70,78 @@ if keyboard_check_pressed(ord("E")) {
 				found = true
 				break
 			}
+			else if (place_meeting(x + dx, y + dy, obj_door)) && room == rm_kitchen && met_voice == true {
+				show_debug_message("kitchendoor")
+				startDialogue("VoiceDoor")
+				found = true
+				break
+			}
+			
+			if (place_meeting(x + dx, y + dy, obj_fish)) && met_voice == false  {
+               show_debug_message("fish")
+			   startDialogue("Fish")
+			   has_fish = true
+               found = true;
+               break;
+            }else if (place_meeting(x + dx, y + dy, obj_fish)) && met_voice == true {
+				show_debug_message("fish")
+				startDialogue("VoiceFish")
+				has_fish = true
+				found = true;
+				break;
+			}
+			
+			if (place_meeting(x + dx, y + dy, obj_wooden_fish))   {
+               show_debug_message("woodenfish")
+			   startDialogue("WoodenFish")
+               found = true;
+               break;
+            }
+			if (place_meeting(x + dx, y + dy, obj_singing_fish))   {
+               show_debug_message("singfish")
+			   startDialogue("SingingFish")
+               found = true;
+               break;
+            }
+			if (place_meeting(x + dx, y + dy, obj_plastic_fish)) && !met_voice  {
+               show_debug_message("plasfish")
+			   startDialogue("PlasticFish")
+               found = true;
+               break;
+            }else if (place_meeting(x + dx, y + dy, obj_plastic_fish)) && met_voice  {
+               show_debug_message("plasfish")
+			   startDialogue("VoicePlasticFish")
+               found = true;
+               break;
+            }
+			if (place_meeting(x + dx, y + dy, obj_fridge)) && met_voice  {
+               show_debug_message("voicefridge")
+			   show_debug_message(string(global.has_apple))
+			   if global.has_apple && !has_fish {
+				   startDialogue("VoiceFridgeApple")
+			   }else if has_fish && !global.has_apple {
+				   startDialogue("VoiceFridgeFish")
+			   }else if !has_fish && !global.has_apple {
+				   startDialogue("VoiceFridge")
+			   }else if has_fish && global.has_apple {
+				   startDialogue("VoiceFridgeFishApple")
+				   
+			   }
+			   
+               found = true;
+               break;
+            }else if (place_meeting(x + dx, y + dy, obj_fridge)) && !met_voice  {
+               show_debug_message("fridge")
+			   startDialogue("Fridge")
+			   met_voice = true
+               found = true;
+               break;
+            }
         }
         if (found) break;
     }
 }
+
 x += hSpeed
 y += vSpeed
 

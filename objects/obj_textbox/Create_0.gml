@@ -42,6 +42,7 @@ text_length = 0
 options = []
 current_option = 0
 option_count = 0
+setEnd = 0
 
 //Methods
 //Start a conversation
@@ -68,4 +69,12 @@ setText = function(newText) {
 	text= newText
 	text_length = string_length(newText)
 	text_progress = 0
+}
+
+setRoom = function(roomNum) {
+	if roomNum == 1 {
+		room_goto(rm_voice_happy)
+	}else if roomNum == 2 {
+		room_goto(rm_voice_angry)
+	}else return
 }
